@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Người dùng</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quản lý Người dùng</h1>
+
+        <div id="error-message"></div>
+
+        <div class="controls">
+            <input type="text" class="search-box" id="searchInput" placeholder="Tìm kiếm theo tên...">
+            <button class="btn btn-primary" id="addUserBtn">Thêm Người dùng</button>
+        </div>
+
+        <div id="loading" class="loading" style="display:none;">
+            Đang tải dữ liệu...
+        </div>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Số điện thoại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+            </tbody>
+        </table>
+
+        <div class="pagination">
+            <button id="prevBtn">Trước</button>
+            <span id="pageInfo"></span>
+            <button id="nextBtn">Sau</button>
+        </div>
+    </div>
+
+    <div class="modal" id="userModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">Thêm Người dùng</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <form id="userForm">
+                <div class="form-group">
+                    <label>Tên *</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label>Tên đăng nhập *</label>
+                    <input type="text" id="userUsername" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="userEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại *</label>
+                    <input type="text" id="userPhone" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn btn-secondary" id="cancelBtn">Hủy</button>
+                    <button type="submit" class="btn btn-primary" id="saveBtn">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
