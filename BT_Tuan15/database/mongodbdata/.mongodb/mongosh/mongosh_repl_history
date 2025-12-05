@@ -1,0 +1,15 @@
+show
+show all
+show dbs
+db.students.insertOne({ name: "Nguyen Van Test", age: 18, class: "10A" })
+use student_db
+cls
+show dbs
+cls
+show dbs
+show
+ls
+cls
+cd studentdb
+ls
+show dbs
